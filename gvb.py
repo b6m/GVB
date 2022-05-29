@@ -15,7 +15,7 @@ class GithubViewBot():
 
     async def view(self):
         for x in range(self.total):
-            r = await self.client.get(f"https://github.com/{self.username}", headers=self.headers)
+            r = await self.client.get(f"https://camo.githubusercontent/{self.username}", headers=self.headers)
             if r.status_code in [200, 201, 202, 203, 204, 205, 206, 207, 208, 226]:
                 self.sucess += 1
                 self.amount += 1
